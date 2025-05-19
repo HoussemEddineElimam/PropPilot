@@ -261,12 +261,12 @@ This project is licensed under ElMaganin - see the LICENSE file for details.
 
 ## 📧 Contact
 
-Team ElMaganin : 
-Houssem Eddine Elimam 
-Yacine Abderahmane Mouhous
-Abderahmane Chibout
-Abdelmalek Elajlat
-Ramy Bouzidi
+# Team ElMaganin : 
+* Houssem Eddine Elimam 
+* Yacine Abderahmane Mouhous
+* Abderahmane Chibout
+* Abdelmalek Elajlat
+* Ramy Bouzidi
 
 houssemelimam.univ@gmail.com
 
