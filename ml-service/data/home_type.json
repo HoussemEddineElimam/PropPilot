@@ -1,0 +1,9 @@
+{
+    "Apartment": 0,
+    "Condo": 1,
+    "Lot": 2,
+    "Manufactured": 3,
+    "Multi Family": 4,
+    "Single Family": 5,
+    "Townhouse": 6
+}

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@tailwind utilities;
+@layer utilities {
+    .grid-cols-31 {
+      grid-template-columns: repeat(31, minmax(25px, 1fr));
+    }
+  }
+  @theme {
+    --font-poppins: "Poppins", sans-serif; 
+    --primary-color:#1F4B43;
+    --scroll-color:#5dade2;
+  }
+  img {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    pointer-events: none;
+  }
+dialog{
+  position: fixed;
+  top: 50%;
+  background-color: transparent;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+a , button{
+  cursor: pointer;
+}
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+  }
+}
+
+
+/* Custom styles for Ant Design menu */
+.settings-dropdown .ant-dropdown-menu {
+  @apply bg-white rounded-lg shadow-lg border border-gray-100;
+}
+
+.settings-dropdown .ant-dropdown-menu-item {
+  @apply px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900;
+}
+
+.settings-dropdown .ant-dropdown-menu-item-icon {
+  @apply text-gray-400;
+}
+
+.settings-dropdown .ant-dropdown-menu-submenu-title {
+  @apply px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900;
+}
+
+.settings-dropdown .ant-dropdown-menu-submenu-arrow {
+  @apply text-gray-400;
+}
+
+.settings-dropdown .ant-dropdown-menu-item-divider {
+  @apply my-1 border-gray-100;
+}
+
+/* Dark mode styles */
+.dark .settings-dropdown .ant-dropdown-menu {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .settings-dropdown .ant-dropdown-menu-item {
+  @apply text-gray-200 hover:bg-gray-700 hover:text-white;
+}
+
+.dark .settings-dropdown .ant-dropdown-menu-item-icon {
+  @apply text-gray-400;
+}
+
+.dark .settings-dropdown .ant-dropdown-menu-submenu-title {
+  @apply text-gray-200 hover:bg-gray-700 hover:text-white;
+}
+
+.dark .settings-dropdown .ant-dropdown-menu-item-divider {
+  @apply border-gray-700;
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+.btn-auth {
+  @apply w-full py-3 rounded-lg font-bold 
+         transition-all duration-300 ease-in-out 
+         shadow-md shadow-rose-200 bg-[#FFF5F2]
+         text-[#3E3E3E];
+  @apply hover:scale-105 hover:shadow-lg hover:shadow-rose-300;
+  @apply active:scale-95 active:shadow-sm;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.btn-google {
+  @apply w-full py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-all duration-200 font-medium flex items-center justify-center gap-2;
+}
+
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+  font-size: 15px;
+  color: #181818;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+
+/* Scrollbar Styling */
+@layer utilities {
+  /* Base scrollbar styles */
+  * {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--scroll-color) #f1f1f1; /* For Firefox */
+  }
+
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--scroll-color);
+    border-radius: 5px;
+    border: 2px solid #f1f1f1;
+    transition: all 0.3s ease;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-color); /* Darker shade of primary color */
+    transform: scale(1.1);
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background: var(--scroll-color); /* Even darker shade */
+  }
+
+  /* Scrollbar corner */
+  *::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+
+  /* Dark mode scrollbar styles */
+  .dark * {
+    scrollbar-color: var(--scroll-color) #2d3748; /* For Firefox */
+  }
+
+  .dark *::-webkit-scrollbar-track {
+    background: #2d3748;
+  }
+
+  .dark *::-webkit-scrollbar-thumb {
+    border: 2px solid #2d3748;
+  }
+}
+
+/* Add some fancy animation for elements with scroll */
+.scroll-animated {
+  &::-webkit-scrollbar-thumb {
+    animation: scrollbarPulse 2s infinite ease-in-out;
+  }
+}
+
+@keyframes scrollbarPulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

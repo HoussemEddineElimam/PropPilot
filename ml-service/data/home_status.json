@@ -1,0 +1,8 @@
+{
+    "For Rent": 0,
+    "For Sale": 1,
+    "Foreclosed": 2,
+    "Pending": 3,
+    "Pre Foreclosure": 4,
+    "Recently Sold": 5
+}
