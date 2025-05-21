@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/PropPilot.git
+git clone https://github.com/HoussemEddineElimam/PropPilot.git
 cd PropPilot
 ```
 
